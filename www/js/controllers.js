@@ -12,4 +12,36 @@ angular.module('starter.controllers', [])
 })
 
 .controller('AccountCtrl', function($scope) {
+})
+
+.directive('bgDateInputValue', ['dateFilter', function(dateFilter) {
+    return {
+        restrict: 'A',
+        require: 'ngModel',
+        link: function(scope, element, attrs, ngModel) {
+            ngModel.$formatters.unshift(function(data) {
+                return dateFilter(data, 'yyyy-MM-dd');
+            });
+
+            ngModel.$parsers.push(function(data) {
+                return new Date(data);
+            });
+        }
+    };
+}])
+
+.directive('bgNumberInputValue', function(currencyFilter) {
+    return {
+        restrict: 'A',
+        require: 'ngModel',
+        link: function(scope, element, attrs, ngModel) {
+            ngModel.$formatters.unshift(function(data) {
+                return parseFloat(data).toFixed(2);
+            });
+
+            ngModel.$parsers.push(function(data) {
+                return parseFloat(data);
+            });
+        }
+    };
 });

@@ -1,17 +1,17 @@
-<ion-view title="{{transaction.description}}">
+<ion-view title="Edit transaction">
   <ion-content has-header="true">
   <ion-list>
-    <label for="" class="item item-input item-stacked-label">
+    <label class="item item-input item-stacked-label">
         <span class="input-label">Date</span>
-        <input type="date" ng-model="transaction.date">
+        <input type="date" ng-model="transaction.date" bg-date-input-value>
     </label>
-    <label for="" class="item item-input item-stacked-label">
+    <label class="item item-input item-stacked-label">
         <span class="input-label">Description</span>
         <input type="text" ng-model="transaction.description">
     </label>
-    <label for="" class="item item-input item-stacked-label">
+    <label class="item item-input item-stacked-label">
         <span class="input-label">Amount</span>
-        <input type="number" ng-model="transaction.amount">
+        <input type="number" ng-model="transaction.amount" bg-number-input-value step="0.01">
     </label>
   </ion-list>
   </ion-content>

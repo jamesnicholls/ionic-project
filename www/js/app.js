@@ -66,6 +66,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+    .state('tab.transaction-new', {
+      url: '/transaction/new',
+      views: {
+        'tab-transactions': {
+          templateUrl: 'templates/transaction-detail.html',
+          controller: 'TransactionDetailCtrl'
+        }
+      }
+    })
 
     .state('tab.account', {
       url: '/account',

@@ -1,4 +1,7 @@
 <ion-view title="Transactions">
+  <ion-nav-buttons side="right">
+    <a class="button button-clear" href="#/tab/transaction/new">Add</a>
+  </ion-nav-buttons>
   <ion-content>
     <ion-list>
       <ion-item ng-repeat="transaction in transactions" href="#/tab/transaction/{{transaction.id}}">

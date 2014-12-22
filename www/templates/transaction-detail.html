@@ -1,4 +1,7 @@
-<ion-view title="Edit transaction">
+<ion-view title="{{ transaction.id ? 'Edit' : 'New' }} transaction">
+  <ion-nav-buttons side="right">
+    <a class="button button-clear" href="#/tab/transaction/new">Done</i></a>
+  </ion-nav-buttons>
   <ion-content has-header="true">
   <ion-list>
     <label class="item item-input item-stacked-label">

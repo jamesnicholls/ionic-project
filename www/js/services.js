@@ -8,9 +8,9 @@ angular.module('starter.services', [])
 
   // Some fake testing data
   var transactions = [
-    { id: 0, description: 'Lunch, Pret a Manger', amount: -4.89, date: 1418925569880 },
-    { id: 1, description: 'Mobile bill, Tesco', amount: -15.10, date: 1418925569880 },
-    { id: 2, description: 'Groceries, Waitrose', amount: -27.30, date: 1418925569880 }
+    { id: 0, description: 'Lunch, Pret a Manger', amount: -4.89, date: new Date(2014, 12, 14) },
+    { id: 1, description: 'Mobile bill, Tesco', amount: -15.10, date: new Date(2014, 12, 7) },
+    { id: 2, description: 'Groceries, Waitrose', amount: -27.30, date: new Date(2014, 12, 3) }
   ];
 
   return {

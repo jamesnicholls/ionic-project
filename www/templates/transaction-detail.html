@@ -1,21 +1,21 @@
 <ion-view title="{{ transaction.id ? 'Edit' : 'New' }} transaction">
-  <ion-nav-buttons side="right">
-    <a class="button button-clear" href="#/tab/transaction/new">Done</i></a>
-  </ion-nav-buttons>
-  <ion-content has-header="true">
-  <ion-list>
-    <label class="item item-input item-stacked-label">
-        <span class="input-label">Date</span>
-        <input type="date" ng-model="transaction.date" bg-date-input-value>
-    </label>
-    <label class="item item-input item-stacked-label">
-        <span class="input-label">Description</span>
-        <input type="text" ng-model="transaction.description">
-    </label>
-    <label class="item item-input item-stacked-label">
-        <span class="input-label">Amount</span>
-        <input type="number" ng-model="transaction.amount" bg-number-input-value step="0.01">
-    </label>
-  </ion-list>
+  <ion-content has-header="true" class="padding">
+    <form ng-submit="saveTransaction(transaction)">
+      <ion-list>
+        <label class="item item-input item-stacked-label">
+            <span class="input-label">Date</span>
+            <input type="date" ng-model="transaction.date" bg-date-input-value>
+        </label>
+        <label class="item item-input item-stacked-label">
+            <span class="input-label">Description</span>
+            <input type="text" ng-model="transaction.description">
+        </label>
+        <label class="item item-input item-stacked-label">
+            <span class="input-label">Amount</span>
+            <input type="number" ng-model="transaction.amount" bg-number-input-value step="0.01">
+        </label>
+      </ion-list>
+      <button class="button button-block button-positive">Save</button>
+    </form>
   </ion-content>
 </ion-view>

@@ -9,6 +9,10 @@ angular.module('starter.controllers', [])
 
 .controller('TransactionDetailCtrl', function($scope, $stateParams, Transactions) {
   $scope.transaction = Transactions.get($stateParams.transactionId);
+
+  $scope.saveTransaction = function(transaction) {
+    Transactions.save(transaction);
+  };
 })
 
 .controller('AccountCtrl', function($scope) {
